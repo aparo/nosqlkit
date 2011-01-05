@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#Brainaetic: http://www.thenetplanet.com
-#Copyright 2006-2010 - The Net Planet Europe S.R.L.  All Rights Reserved.
+
 import os
 import traceback
 import logging
@@ -49,10 +48,6 @@ def get_module_dir_by_string(text):
         module_pos=getattr(module_pos,attr)
     return os.path.split(module_pos.__file__)[0]
 
-def test_function_code():
-    f=get_function_by_code('brainaetic.utils.tokenizer.Tokenizer')
-    t=f()
-    print t.sepmarks
 
 def get_addins(code_path, filter=None, with_name=False):
     """
@@ -136,16 +131,4 @@ def load_engines(namespace=None, path=None, modulesdir=None, baseclass='Engine',
     return engines
 
 if __name__ == '__main__':
-    
-#    print repr(get_function_by_name('brainaetic.utils.stringutils','str2md5'))
-#    print repr(get_function_by_code('brainaetic.utils.stringutils.str2md5'))
-#    f=get_function_by_code('brainaetic.utils.stringutils.str2md5')
-#    print f('prova')
-#    print get_module_dir_by_string('brainaetic.utils.stringutils')
-#    print repr(get_function_by_code('brainaetic.utils.stringutils.str2md5'))
-#    print repr(get_function_by_code('brainaetic.utils.stringutils'))
-#    print repr(get_module_by_code('brainaetic.indexer.tests.echidna_test'))
-#    print get_addins('brainaetic.importer.modules')
-
-#    print load_engines(namespace='brainaetic.monitor.modules', baseclass='Monitor')
-    print load_engines(namespace='brainaetic.generators.modules', baseclass='Generator')
+    pass
